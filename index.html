@@ -15,16 +15,18 @@
     <title>Melina Martinez CV</title>
   </head>
   <body>
+    <!-- INICIO -->
     <section class="inicio" id="inicio">
       <div class="contenido-seccion">
         <header>
-          <div class="nav-bar">
+          <div class="nav-bar" onclick="mostrarOcultarMenu()">
             <i class="fa-solid fa-bars"></i>
           </div>
           <nav id="nav" class="nav">
             <a href="#inicio">Inicio</a>
             <a href="#sobremi">Sobre mi</a>
             <a href="#habilidades">Habilidades</a>
+            <a href="#resumen">Resumen</a>
             <a href="#contacto">Contacto</a>
           </nav>
           <div class="logo">
@@ -107,8 +109,6 @@
             <span>HTML</span>
             <div class="cont-barra">
               <div class="barra" id="html">
-                <!-- despues agrego las barritas con js -->
-                <div class="e"></div>
               </div>
               <span>98%</span>
             </div>
@@ -117,7 +117,6 @@
             <span>CSS</span>
             <div class="cont-barra">
               <div class="barra" id="css">
-                <div class="e"></div>
               </div>
               <span>80%</span>
             </div>
@@ -128,8 +127,6 @@
             <span>JAVASCRIPT</span>
             <div class="cont-barra">
               <div class="barra" id="javascript">
-                <!-- despues agrego las barritas con js -->
-                <div class="e"></div>
               </div>
               <span>60%</span>
             </div>
@@ -138,7 +135,6 @@
             <span>EXCEL</span>
             <div class="cont-barra">
               <div class="barra" id="excel">
-                <div class="e"></div>
               </div>
               <span>90%</span>
             </div>
@@ -248,5 +244,7 @@
         </div>
       </div>
     </section>
+
+    <script src="app.js"></script>
   </body>
 </html>
