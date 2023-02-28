@@ -37,3 +37,41 @@ let javasript = document.getElementById("javascript");
 crearBarra(javascript);
 let excel = document.getElementById("excel");
 crearBarra(excel);
+
+let contadores = [-1,-1,-1,-1,-1,-1];
+let entro = false;
+
+function efectoHabilidades(){
+    var habilidades = document.getElementById("habilidades");
+    var distancia_skills = window.innerHeight - habilidades.getBoundingClientRect().top;
+    if(distancia_skills>=300 && entro==false){
+        entro = true; 
+        const intervalHtml = setInterval(function(){
+            pintarBarra(html, 16, 0, intervalHtml);
+        },100)
+        const intervalCss = setInterval(function(){
+            pintarBarra(css, 15, 1, intervalCss);
+        },100)
+        const intervalJavascript = setInterval(function(){
+            pintarBarra(javascript, 13, 2, intervalJavascript);
+        },100)
+        const intervalExcel = setInterval(function(){
+            pintarBarra(excel, 16, 3, intervalExcel);
+        },100)
+    }  
+}
+
+function pintarBarra(id_barra, cantidad, indice, interval){
+    contadores[indice]++;
+    x = contadores[indice];
+    if(x < cantidad){
+        let elementos = id_barra.getElementsByClassName("e");
+        elementos[x].style.backgroundColor = "#609966";
+    }else{
+        clearInterval(interval)
+    }
+}
+
+window.onscroll = function(){
+    efectoHabilidades();
+}
